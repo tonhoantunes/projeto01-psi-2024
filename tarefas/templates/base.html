@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>{% block title %}Início - Real Madrid{% endblock %}</title>
+</head>
+<body>
+    <!--Cabeçalho-->
+    <header class="header">
+        <!--Logo-->
+        <a href="{% url 'index' %}" class="logo"> <img src="img/logo-real-madrid.svg" alt=""> </a>
+        <!--Páginas-->
+
+        <nav class="navbar">
+            <a href="{% url 'index' %}">Início</a>
+            <a href="{% url 'jogadores' %}">Jogadores</a>
+            <a href="{% url 'sobre' %}">Sobre</a>
+        </nav>
+</header>
+</body>
+</html>
