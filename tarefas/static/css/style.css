@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+    box-sizing: border-box;
+}
+
+:root {
+    --container-color: #1a1e21;
+    --second-color: #3E31FA;
+    --text-color: #5E6A83;
+    --bg-color: #fff;
+}
+
+/*Menu*/
+
+header.header {
+    background: var(--bg-color);
+    box-shadow: 0 1px 4px hsl(0 4% 14% / 10%);
+    transition: 0.4s;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 200;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+}
+
+.container {
+    max-width: 1068px;
+    margin: auto;
+    width: 100%;
+}
+
+.logo_img {
+    width: 50px;
+    height: 50px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 50px;
+}
+
+.social .bx {
+    font-size: 1.4rem;
+    margin-left: 20px;
+    color: var(--text-color);
+}
+
+.navbar a:hover {
+    color: var(--second-color);
+    transition: 0.7s;
+}
+
+.social .bx:hover {
+    color: var(--second-color);
+    transition: 0.7s;
+}

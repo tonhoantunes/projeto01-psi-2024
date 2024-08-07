@@ -6,20 +6,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <title>{% block title %}Início - Real Madrid{% endblock %}</title>
 </head>
 <body>
     <!--Cabeçalho-->
     <header class="header">
         <!--Logo-->
-        <a href="{% url 'index' %}" class="logo"> <img src="img/logo-real-madrid.svg" alt=""> </a>
-        <!--Páginas-->
+        <div class="nav container">
+            <a href="{% url 'index' %}" class="logo"> <img src="{% static 'img/logo-real-madrid.svg' %}" alt="Logo do Real Madrid" class="logo_img"> </a>
+            <!--Páginas-->
+            <nav class="navbar">
+                <a href="{% url 'index' %}">Início</a>
+                <a href="{% url 'jogadores' %}">Jogadores</a>
+                <a href="{% url 'sobre' %}">Sobre</a>
+            </nav>
+            <div class="social">
+                <a href="https://www.instagram.com/realmadrid/" target="_blank"><i class="bx bxl-instagram"></i></a>
+                <a href="https://www.facebook.com/RealMadrid/?locale=pt_BR" target="_blank"><i class="bx bxl-facebook"></i></a>
+                <a href="https://x.com/realmadrid" target="_blank"><i class="bx bxl-twitter"></i></a>
+            </div>
+        </div>
+    </header>
 
-        <nav class="navbar">
-            <a href="{% url 'index' %}">Início</a>
-            <a href="{% url 'jogadores' %}">Jogadores</a>
-            <a href="{% url 'sobre' %}">Sobre</a>
-        </nav>
-</header>
+    <!--Conteúdo-->
+    {% block content %}
+        <div>
+        </div>
+    {% endblock %}
 </body>
 </html>
