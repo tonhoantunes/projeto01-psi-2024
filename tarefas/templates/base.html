@@ -10,6 +10,7 @@
     <title>{% block title %}Início - Real Madrid{% endblock %}</title>
 </head>
 <body>
+    {% block nav %}
     <!--Cabeçalho-->
     <header class="header">
         <!--Logo-->
@@ -28,14 +29,18 @@
             </div>
         </div>
     </header>
+    {% endblock %}
 
     <!--Conteúdo-->
     {% block content %}
-        <section class="home" id="home">
-            <img src="{% static 'img/real_madrid_cr7.jpg' %}" alt="Foto do Cristiano Ronaldo no Real Madrid">
-            <h1>Real Madrid</h1>
-            <h3>¡El mejor club del mundo!</h3>
-        </section>
+
     {% endblock %}
+
+    <div class="footer container">
+        <p>Copyright © 2024.</p>
+        <div class="footer_text">
+            <p>Produzido por Antônio Antunes e Pedro Isaac</p>
+        </div>
+    </div>
 </body>
 </html>
