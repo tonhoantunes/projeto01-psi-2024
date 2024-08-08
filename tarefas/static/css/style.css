@@ -16,7 +16,7 @@
     --bg-color: #fff;
 }
 
-/*Menu*/
+/* Menu */
 
 header.header {
     background: var(--bg-color);
@@ -72,4 +72,12 @@ header {
 .social .bx:hover {
     color: var(--second-color);
     transition: 0.7s;
+}
+
+/* Home */
+
+.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
