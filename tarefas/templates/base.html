@@ -33,7 +33,60 @@
 
     <!--Conteúdo-->
     {% block content %}
+    <section class="home container">
+        <div class="home_text">
+            <a href="{% url 'index' %}"><h1>Real Madrid</h1></a>
+            <a href="{% url 'index' %}"><h3>¡El mejor equipo del mundo!</h3></a>
+        </div>
+    </section>
 
+    <h1 class="titulo">Principais notícias</h1>
+
+    <section class="post container">
+        <div class="post-caixa">
+            <img src="{% static 'img/real_madrid_endrick.webp' %}" alt="Foto da apresentação de Endrick ao Real Madrid" class="post-img"> 
+            <a href="https://www.realmadrid.com/pt-PT/noticias/futebol/primeira-equipa/atualidade/acto-de-presentacion-de-endrick-27-07-2024" class="post-titulo">Recepção calorosa a Endrick no Santiago Bernabéu</a>
+        </div>
+        <div class="post-caixa">
+            <img src="{% static 'img/real_madrid_champions.webp' %}" alt="Foto da décima quinta Champions League do Real Madrid" class="post-img"> 
+            <a href="https://www.realmadrid.com/pt-PT/noticias/futebol/primeira-equipa/atualidade/la-decimoquinta-06-06-2024" class="post-titulo">A Décima Quinta!</a>
+        </div>
+        <div class="post-caixa">
+            <img src="{% static 'img/real_madrid_mbappe.webp' %}" alt="Foto da apresentação de Mbappé ao Real Madrid" class="post-img"> 
+            <a href="https://www.realmadrid.com/pt-PT/noticias/futebol/primeira-equipa/especiais/especial-fichaje-de-mbappe-25-07-2024" class="post-titulo">Especial: a espetacular apresentação de Mbappé no Real Madrid</a>
+        </div>
+    </section>
+
+    <h1 class="titulo">Uniforme oficial Real Madrid 2024/2025</h1>
+
+    <section class="post container">
+        <div class="post-caixa">
+            <img src="{% static 'img/real_madrid_uniformejogador.webp' %}" alt="Foto do uniforme de jogador do Real Madrid" class="post-img"> 
+            <a href="https://www.realmadrid.com/pt-PT/noticias/club/atualidade/coleccion-hombre-temporada-24-25" class="post-titulo">Coleção Casa</a>
+        </div>
+        <div class="post-caixa">
+            <img src="{% static 'img/real_madrid_uniformegoleiro.webp' %}" alt="Foto do uniforme de goleiro do Real Madrid" class="post-img"> 
+            <a href="https://www.realmadrid.com/pt-PT/noticias/club/atualidade/coleccion-mujer-temporada-24-25" class="post-titulo">Coleção Goleiros</a>
+        </div>
+        <div class="post-caixa">
+            <img src="{% static 'img/real_madrid_uniformetreino.webp' %}" alt="Foto do unforme de treino do Real Madrid" class="post-img"> 
+            <a href="https://www.realmadrid.com/pt-PT/noticias/club/atualidade/coleccion-nino-temporada-24-25" class="post-titulo">Coleção Treino</a>
+        </div>
+    </section>
+    
+    <style>
+        .home {
+            margin-top: 5rem;
+            background-image: url({% static 'img/real_madrid_home.jpg' %});
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: 440px;
+            border-radius: 1.5rem;
+            display: flex;
+            align-items: center;
+        }
+    </style>
     {% endblock %}
 
     <div class="footer container">
