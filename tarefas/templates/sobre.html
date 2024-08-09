@@ -1,25 +1,11 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<section class="home container">
+<section class="home container" style="background-image: url('{% static 'img/real_madrid_home.jpg' %}');">
     <div class="home_text">
         <a href="{% url 'sobre' %}"><h1>Sobre o clube</h1></a>
     </div>
 </section>
-
-<style>
-    .home {
-        margin-top: 5rem;
-        background-image: url({% static 'img/real_madrid_home.jpg' %});
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        height: 440px;
-        border-radius: 1.5rem;
-        display: flex;
-        align-items: center;
-    }
-</style>
 
 <div class="sobre container">
     <p>O Real Madrid, fundado em 1902, é um dos clubes mais icônicos e bem-sucedidos do futebol. Com uma rica história de conquistas, destacou-se especialmente nas décadas de 50 e 2000. Na década de 50, ganhou cinco Ligas dos Campeões consecutivas, enquanto nos anos 2000 brilhou com a era dos "Galácticos", conquistando vários títulos, incluindo três Ligas dos Campeões seguidas entre 2016 e 2018. Conhecido por sua excelência e inovação, o Real Madrid é um símbolo global de sucesso esportivo.</p>

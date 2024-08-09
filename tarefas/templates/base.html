@@ -33,7 +33,7 @@
 
     <!--Conteúdo-->
     {% block content %}
-    <section class="home container">
+    <section class="home container" style="background-image: url('{% static 'img/real_madrid_home.jpg' %}');">
         <div class="home_text">
             <a href="{% url 'index' %}"><h1>Real Madrid</h1></a>
             <a href="{% url 'index' %}"><h3>¡El mejor equipo del mundo!</h3></a>
@@ -73,20 +73,6 @@
             <a href="https://www.realmadrid.com/pt-PT/noticias/club/atualidade/coleccion-nino-temporada-24-25" class="post-titulo">Coleção Treino</a>
         </div>
     </section>
-    
-    <style>
-        .home {
-            margin-top: 5rem;
-            background-image: url({% static 'img/real_madrid_home.jpg' %});
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            height: 440px;
-            border-radius: 1.5rem;
-            display: flex;
-            align-items: center;
-        }
-    </style>
     {% endblock %}
 
     <div class="footer container">

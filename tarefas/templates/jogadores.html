@@ -2,125 +2,32 @@
 {% load static %}
 
 <!--Edição do conteúdo da página "Jogadores"-->
+
 {% block content %}
-<section class="home container">
+<section class="home container" style="background-image: url('{% static 'img/real_madrid_home.jpg' %}');">
     <div class="home_text">
         <a href="{% url 'jogadores' %}"><h1>Jogadores</h1></a>
     </div>
 </section>
-    <section class="post container">
-    <!--Goleiro-->
-        <div class="card">
-            <div class="jogadores">
-                <img src="{% static 'img/courtois.webp' %}" alt="Foto do Courtois"> 
-                <h1>Courtois</h1>
-                <p>1</p>
-                <p>Goleiro</p>
-            </div>
-        </div>
 
-    <!--Defensores-->
-    <div class="card">
-        <div class="jogadores">
-            <img src="{% static 'img/carvajal.webp' %}" alt="Foto do Carvajal"> 
-            <h1>Carvajal</h1>
-            <p>2</p>
-            <p>Lateral</p>
-        </div>
-    </div>
-    <div class="card">
-        <div class="jogadores">
-            <img src="{% static 'img/militao.webp' %}" alt="Foto do Militão"> 
-            <h1>E. Militão</h1>
-            <p>3</p>
-            <p>Zagueiro</p>
-        </div>
-    </div>
-    <div class="card">
-        <div class="jogadores">
-            <img src="{% static 'img/rudiger.webp' %}" alt="Foto do Rudiger"> 
-            <h1>Rudiger</h1>
-            <p>22</p>
-            <p>Zagueiro</p>
-        </div>
-    </div>
-    <div class="card">
-        <div class="jogadores">
-            <img src="{% static 'img/mendy.webp' %}" alt="Foto do Mendy"> 
-            <h1>F. Mendy</h1>
-            <p>23</p>
-            <p>Lateral</p>
-        </div>
-    </div>
 
-    <!--Meio Campistas-->
-    <div class="card">
-        <div class="jogadores">
-            <img src="{% static 'img/valverde.webp' %}" alt="Foto do Valverde"> 
-            <h1>Valverde</h1>
-            <p>8</p>
-            <p>Meio-campista</p>
-        </div>
-    </div><div class="card">
-        <div class="jogadores">
-            <img src="{% static 'img/modric.webp' %}" alt="Foto do Modric"> 
-            <h1>Modric</h1>
-            <p>10</p>
-            <p>Meio-campista</p>
-        </div>
-    </div><div class="card">
-        <div class="jogadores">
-            <img src="{% static 'img/bellingham.webp' %}" alt="Foto do Bellingham"> 
-            <h1>Bellingham</h1>
-            <p>5</p>
-            <p>Meio-campista</p>
-        </div>
-    </div>
 
-    <!--Atacantes-->
-    <div class="card">
-        <div class="jogadores">
-            <img src="{% static 'img/rodrygo.webp' %}" alt="Foto do Rodrygo"> 
-            <h1>Rodrygo</h1>
-            <p>11</p>
-            <p>Atacante</p>
+<div class="grid">
+{% for jogador in jogadores %}
+    <section class="jogador container">
+        <div class="jogador-caixa">
+            <img src="{% static jogador.foto %}" alt="{{ jogador.nome }}" class="jogador-img"> 
+            <div class="card-body">
+                <h1 class="jogador-titulo">{{ jogador.nome }}</h5>
+                <div class="jogador-text">
+                  Idade: {{ jogador.idade }}<br>
+                  Local de Nascimento: {{ jogador.nascimento }}<br>
+                  Posição: {{ jogador.posicao }}<br>
+                </div>
+              </div>
         </div>
-    </div><div class="card">
-        <div class="jogadores">
-            <img src="{% static 'img/mbappe.webp' %}" alt="Foto do Mbappé"> 
-            <h1>Mbappé</h1>
-            <p>9</p>
-            <p>Atacante</p>
-        </div>
-    </div><div class="card">
-        <div class="jogadores">
-            <img src="{% static 'img/vini.webp' %}" alt="Foto do Vini Jr"> 
-            <h1>Vini Jr.</h1>
-            <p>7</p>
-            <p>Atacante</p>
-        </div>
-    </div>
-
-    <!--Técnico-->
-    <div class="card">
-        <div class="jogadores">
-            <img src="{% static 'img/ancelotti.webp' %}" alt="Foto do Ancelotti"> 
-            <h1>Carlo Ancelotti</h1>
-            <p>Técnico</p>
-        </div>
-    </div>
     </section>
-<style>
-    .home {
-        margin-top: 5rem;
-        background-image: url({% static 'img/real_madrid_home.jpg' %});
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        height: 440px;
-        border-radius: 1.5rem;
-        display: flex;
-        align-items: center;
-    }
-</style>
+{% endfor %}
+</div>
+
 {% endblock %}
